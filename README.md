@@ -28,6 +28,12 @@ $ docker build -t angr - < angr-dev/Dockerfile
 $ docker run -it angr
 ```
 
+If you are behind a proxy you can use build arguments:
+```ShellSession
+$ docker build -t angr --build-arg https_proxy=${https_proxy} --build-arg http_proxy=${http_proxy} - < angr-dev/Dockerfile
+$ docker run -it angr
+```
+
 ## Updating
 
 To update angr, simply pull all the git repositories.
